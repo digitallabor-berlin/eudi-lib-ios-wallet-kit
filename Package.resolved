@@ -22,7 +22,7 @@
     {
       "identity" : "eudi-lib-ios-iso18013-data-transfer",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/maxthure/eudi-lib-ios-iso18013-data-transfer.git",
+      "location" : "https://github.com/digitallabor-berlin/eudi-lib-ios-iso18013-data-transfer.git",
       "state" : {
         "branch" : "main",
         "revision" : "75878e024f9d96b69f2f033627fa3f20fc2e27fe"
@@ -31,7 +31,7 @@
     {
       "identity" : "eudi-lib-ios-iso18013-security",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/maxthure/eudi-lib-ios-iso18013-security.git",
+      "location" : "https://github.com/digitallabor-berlin/eudi-lib-ios-iso18013-security.git",
       "state" : {
         "branch" : "main",
         "revision" : "76cfd2c7aef57a733204be1227c42125aaae7cfe"
