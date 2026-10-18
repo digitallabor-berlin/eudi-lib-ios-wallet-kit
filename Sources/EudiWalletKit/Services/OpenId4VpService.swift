@@ -369,7 +369,11 @@ public final class OpenId4VpService: @unchecked Sendable, PresentationService {
 			]),
 			supportedTransactionDataTypes: [
 				.init(type: .init(value: "authorization"), hashAlgorithms: [.sha256]),
-				.init(type: .init(value: "urn:paso:sca:global:payment:1"), hashAlgorithms: [.sha256])
+				.init(type: .init(value: "urn:paso:sca:global:payment:1"), hashAlgorithms: [.sha256]),
+				// Patch #11 (EUDIPal Scoped Mandate): the bank acts as PaSO verifier for agent
+				// mandates. Our own registered transaction-data types, sha-256 like PaSO.
+				.init(type: .init(value: "urn:digitallabor:paso:generic_mandate:1"), hashAlgorithms: [.sha256]),
+				.init(type: .init(value: "urn:digitallabor:paso:scoped_mandate:2"), hashAlgorithms: [.sha256])
 			]
 		)
 		let res = OpenId4VPConfiguration(privateKey: privateKey, publicWebKeySet: keySet, supportedClientIdSchemes: supportedClientIdPrefixes, vpFormatsSupported: [], jarConfiguration: .encryptionOption, vpConfiguration: vpConf ?? .default(), errorDispatchPolicy: .allClients, session: networking, responseEncryptionConfiguration: openID4VpConfig.responseEncryptionConfiguration ?? .default())
